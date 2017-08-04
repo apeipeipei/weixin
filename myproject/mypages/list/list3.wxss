@@ -1,0 +1,7 @@
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color:	#40E0D0;
+  background-size: 100% 100%;
+  background-image:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1501838674596&di=1ae1de55c2eca1119040a0745b58bbc4&imgtype=0&src=http%3A%2F%2Fimg.mp.sohu.com%2Fq_mini%2Cc_zoom%2Cw_640%2Fupload%2F20170705%2Fdbfee06c2627490092d5b842a7aacebb_th.jpg");  
+} 

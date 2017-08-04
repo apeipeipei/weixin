@@ -1,5 +1,6 @@
 Page({
 	data: {
+    count:0,
     animationData: {}
   },
   onShow: function(){
@@ -23,6 +24,11 @@ Page({
       })
     }.bind(this), 1000)
   },
+  countClick:function(){
+    this.setData({
+      count:this.data.count+1
+    });
+  }/*,
   rotateAndScale: function () {
     // 旋转同时放大
     this.animation.rotate(45).scale(2, 2).step()
@@ -45,5 +51,5 @@ Page({
     this.setData({
       animationData: this.animation.export()
     })
-  }
+  }*/
 });

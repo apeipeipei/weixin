@@ -1,4 +1,3 @@
 <view bindtap="countClick">
 	我是index页面，你点击了{{count}}次
 </view>
-<view animation="{{animationData}}" style="background:green;height:100rpx;width:100rpx"></view>

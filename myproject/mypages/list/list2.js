@@ -7,7 +7,10 @@ Page({
   data: {
   text:'帅不帅?',
   object:{subObject:{objectText:'object data'}},
-  array:[{arrayText:'array data'}]
+  array:[{arrayText:'array data'}],
+  tip:'',
+  userName:'',
+  passWord:''
   },
 
   /**
@@ -89,5 +92,27 @@ Page({
       /*修改一个已绑定，但未在data中定义的数据*/
       'newField.newFieldText':'add new data'
     });
+  },
+  submitClick: function(e){
+    if (e.detail.value.userName.length == 0 || e.detail.value.passWord.length == 0) {
+      this.setData({
+        tip:'提示：用户名和密码不能为空！',
+        userName:'',
+        passWord:''
+      })
+    }else{
+      this.setData({
+        tip:'登录成功',
+        userName:'用户名：' + e.detail.value.userName,
+        passWord:'密码：' + e.detail.value.passWord
+      })
+    }
+  },
+  resetClick: function(){
+    this.setData({
+      tip:'',
+      userName:'',
+      passWord:''
+    })
   }
 });

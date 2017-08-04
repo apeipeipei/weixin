@@ -1,18 +1,22 @@
 <!--mypages/list/list2.wxml-->
-<view>
-<text>哎哟~握草！</text>
-</view>
-
-<view>{{text}}</view>
-<button bindtap="changeText">修改普通数据</button>
-
-<view>{{object.subObject.objectText}}</view>
-<button bindtap="changeObjectText">修改对象数据</button>
-
-<view>{{array[0].arrayText}}</view>
-<button bindtap="changeArrayText">修改数组数据</button>
-
-<view>{{newField.newFieldText}}</view>
-<button bindtap="addNewData">添加新字段</button>
-
+<text>Are you OK？</text>
+<form bindsubmit="submitClick" bindreset="resetClick">
+<view >
+ 用户名：
+ <input class="input" name="userName" placeholder="请输入用户名"
+  bindinput="userNameInput"/>
+ 密码：
+ <input class="input" name="password" password="true" placeholder="请输入用户密码" bindinput="passWordInput"/>
+ </view>
+ <view class="viewName" style="background-color:#fbf9fe">
+ <label name="list2Button" for="login">
+ <button  id="login" form-type="submit">登录</button>
+ <button  id="reset" form-type="reset">重置</button>
+ </label>
+ 
+ </view>
+</form>
+<view >{{tip}}</view>
+<view >{{userName}}</view>
+<view >{{passWord}}</view>
 
